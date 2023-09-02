@@ -87,6 +87,7 @@ function moveCardWhenPullRequestOpen(apiKey, apiToken, boardId) {
 
     getCardsOfList(apiKey, apiToken, departureListId).then(function(response) {
       const cards = response;
+      console.log(cards);
       let cardId;
       let existingMemberIds = [];
       cards.some(function(card) {

@@ -67,6 +67,7 @@ function createCardWhenIssueOpen(apiKey, apiToken, boardId) {
 }
 
 function moveCardWhenPullRequestOpen(apiKey, apiToken, boardId) {
+  console.log(github.context.payload.pull_request);
   const departureListId = process.env['TRELLO_DEPARTURE_LIST_ID'];
   const destinationListId = process.env['TRELLO_DESTINATION_LIST_ID'];
   const pullRequest = github.context.payload.pull_request
